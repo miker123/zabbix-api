@@ -16,6 +16,8 @@ zapi = ZabbixAPI(ZABBIX_SERVER)
 
 #if getting certification errors, the line below is required
 zapi.session.verfy=False 
+requests.packages.urllib3.disable_warnings()
+
 
 # Login to the Zabbix API
 #replace username and password with the appropriate data. Keep the quotes around the data.

@@ -14,6 +14,9 @@ ZABBIX_SERVER = 'Zabbix Web Interface URL'
 
 zapi = ZabbixAPI(ZABBIX_SERVER)
 
+#if getting certification errors, the line below is required
+zapi.session.verfy=False 
+
 # Login to the Zabbix API
 #replace username and password with the appropriate data. Keep the quotes around the data.
 zapi.login('username', 'password')
